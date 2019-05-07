@@ -1,0 +1,20 @@
+a {
+	color: inherit;
+	text-decoration: underline;
+
+	&:visited {
+		color: inherit;
+	}
+	&:hover,
+	&:focus,
+	&:active {
+		color: inherit;
+	}
+	&:focus {
+		outline: thin dotted;
+	}
+	&:hover,
+	&:active {
+		outline: 0;
+	}
+}

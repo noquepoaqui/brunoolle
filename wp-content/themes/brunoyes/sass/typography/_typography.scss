@@ -1,0 +1,102 @@
+body,
+button,
+input,
+select,
+optgroup,
+textarea {
+	color: $color__text-main;
+	font-family: $font__main;
+	@include font-size(1);
+	line-height: $font__line-height-body;
+    letter-spacing: $font__walsh-letter-spacing;
+    font-size: $font__size;
+}
+
+@import "headings";
+
+@import "copy";
+
+.gt-walsheim-14-light {
+    font-family: $font__main;
+    font-weight: 300;
+    font-size: 14px;
+    letter-spacing: 0.04em;
+    line-height: 19.5px;
+}
+
+.gt-walsheim-14-regular {
+    font-family: $font__main;
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 0.04em;
+    line-height: 19.5px;
+}
+
+.gt-walsheim-14-bold {
+    font-family: $font__main;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 0.04em;
+    line-height: 19.5px;
+}
+
+.gt-walsheim-24-light {
+    font-family: $font__main;
+    font-size: 24px;
+    letter-spacing: 0.04em;
+    line-height: 29px;
+    font-weight: 300;
+}
+
+.gt-walsheim-24-regular {
+    font-family: $font__main;
+    font-size: 24px;
+    letter-spacing: 0.04em;
+    line-height: 29px;
+    font-weight: 400;
+}
+
+.gt-walsheim-24-bold {
+    font-family: $font__main;
+    font-size: 24px;
+    letter-spacing: 0.04em;
+    line-height: 29px;
+    font-weight: 500;
+}
+
+.minion-pro-16-regular {
+    font-family: $font__secondary;
+    font-weight: 400;
+    font-size: 16.6px;
+    letter-spacing: -0.011em;
+    line-height: 22.6px;
+}
+
+.minion-pro-16-bold {
+    font-family: $font__secondary;
+    font-weight: 500;
+    font-size: 16.6px;
+    letter-spacing: -0.011em;
+    line-height: 22.6px;
+}
+
+.minion-pro-22-regular {
+    font-family: $font__secondary;
+    font-weight: 400;
+    font-size: 22.5px;
+    letter-spacing: 0;
+    line-height: 29px;
+}
+
+.minion-pro-22-bold {
+    font-family: $font__secondary;
+    font-weight: 500;
+    font-size: 22.5px;
+    letter-spacing: 0;
+    line-height: 29px;
+}
+
+body.webkit strong,
+body.webkit b {
+    font-weight: 500 !important;
+}

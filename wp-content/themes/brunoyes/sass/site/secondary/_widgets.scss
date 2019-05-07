@@ -1,0 +1,109 @@
+.back-to-top {
+    cursor: pointer;
+    width: 100%;
+
+    @include tablet {
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+
+    svg {
+        display: inline;
+        width: 12px;
+        transform: rotate(180deg);
+        position: relative;
+        top: -4px;
+    }
+}
+
+.widget-area {
+    font-size: 14px;
+    line-height: 19.5px;
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    border-top: 1px solid #000;
+    padding-top: 20px;
+    width: 100%;
+
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    box-orient: vertical;
+
+    @include tablet {
+        height: 140px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .copyright {
+        font-weight: 500;
+        font-size: 14px;
+        -webkit-box-ordinal-group: 3;
+        -moz-box-ordinal-group: 3;
+        box-ordinal-group: 3;
+
+        @include tablet {
+            width: 180px;
+            -webkit-box-ordinal-group: 1;
+            -moz-box-ordinal-group: 1;
+            box-ordinal-group: 1;
+        }
+    }
+
+    .widget {
+        margin: 0 0 1.5em;
+
+        /* Make sure select elements fit in widgets. */
+        select {
+            max-width: 100%;
+        }
+
+        &#text-2 {
+            margin-bottom: 25px;
+
+            @include tablet {
+                .textwidget {
+                    display: flex;
+
+                    div {
+                        width: 180px;
+                    }
+                }
+            }
+        }
+
+        &#custom_html-2 {
+            margin-bottom: 25px;
+
+            @include tablet {
+                flex-grow: 3;
+            }
+
+            .custom-html-widget {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+
+                @include tablet {
+                    float: right;
+                }
+
+                a {
+                    height: 14px;
+                    line-height: 14px;
+                    svg {
+                        margin-right: 30px;
+                        height: 100%;
+                    }
+
+                    &:last-child {
+                        svg {
+                            margin-right: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

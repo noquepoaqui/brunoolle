@@ -1,0 +1,179 @@
+// @import "../layout/content-sidebar";
+// @import "../layout/sidebar-content";
+
+/*--------------------------------------------------------------
+## Posts and pages
+--------------------------------------------------------------*/
+@import "primary/posts-and-pages";
+@import "primary/archive-work";
+@import "primary/text-press";
+@import "primary/about";
+
+/*--------------------------------------------------------------
+## Comments
+--------------------------------------------------------------*/
+@import "primary/comments";
+
+.site {
+    @include tablet {
+        padding: 0;
+        margin: 0 20px;
+    }
+
+    @include desktop {
+        margin: 0 70px;
+    }
+
+    @include desktop-big {
+        margin: 0 140px;
+    }
+
+    @media (min-width: 1560px) {
+        margin: auto;
+        max-width: 1280px;
+    }
+}
+
+.site-header::before {
+    background-color: white;
+}
+
+.site-header {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    top: 0;
+    z-index: 9999;
+    left: 20px;
+    right: 20px;
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        opacity: 0.6;
+        z-index: -4;
+    }
+
+    .site-branding {
+        z-index: 9999;
+    }
+
+    @include desktop {
+        left: 70px;
+        right: 70px;
+    }
+
+    @include desktop-big {
+        left: 140px;
+        right: 140px;
+    }
+
+    @media (min-width: 1560px) {
+        left: 0;
+        right: 0;
+        max-width: 1280px;
+        margin: auto;
+    }
+}
+
+.site-content {
+    margin-top: 140px;
+}
+
+.admin-bar .site .site-header {
+    top: 46px;
+
+    @include tablet {
+        top: 32px;
+    }
+}
+
+.site-title {
+    margin: 0;
+
+    a {
+        text-decoration: none;
+    }
+}
+
+.page-wrapper {
+    min-height: 100%;
+}
+
+.site {
+    overflow: auto;
+    padding-bottom: 277px;
+    @include tablet {
+        padding-bottom: 159px;
+    }
+}
+
+.footer-container {
+    margin: auto;
+    position: relative;
+    margin-top: -277px;
+    height: 277px;
+    clear: both;
+    display: flex;
+    flex-wrap: wrap;
+
+    @include tablet {
+        align-items: flex-end;
+        margin-top: -159px;
+        margin-left: 20px;
+        margin-right: 20px;
+        height: 159px;
+        margin-bottom: 0;
+    }
+
+    @include desktop {
+        margin-left: 70px;
+        margin-right: 70px;
+
+    }
+
+    @include desktop-big {
+        margin-left: 140px;
+        margin-right: 140px;
+    }
+
+    @media (min-width: 1560px) {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 1280px;
+    }
+}
+
+.background-image-container {
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+}
+
+svg .global-stroke {
+    stroke: black;
+    fill: none;
+}
+
+svg .global-fill {
+    fill: black;
+}
+
+svg .global-color {
+    stroke: black;
+    fill: black;
+}

@@ -1,0 +1,44 @@
+#php_value upload_max_filesize 1000M
+#php_value post_max_size 2000M
+#php_value memory_limit 3000M
+#php_value max_execution_time 180
+#php_value max_input_time 180
+
+	#<Directory "/var/bigdata/users/web465/web/http">
+#	<Location "/">
+		AuthType basic 
+		AuthName "Acceso privado"
+		AuthBasicProvider file
+		AuthUserFile "/home/www/new.brunoolle.com/htpasswd"
+		Require valid-user
+		#Satisfy	any
+	#</Directory>
+#	</Location>
+
+
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+
+# END WordPress
+
+
+# Wordfence WAF
+<Files ".user.ini">
+<IfModule mod_authz_core.c>
+	Require all denied
+</IfModule>
+<IfModule !mod_authz_core.c>
+	Order deny,allow
+	Deny from all
+</IfModule>
+</Files>
+
+# END Wordfence WAF
+

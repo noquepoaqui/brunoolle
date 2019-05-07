@@ -1,0 +1,38 @@
+.post-type-archive-text_press {
+    article {
+        margin-bottom: 20px;
+    }
+
+    header {
+        cursor: pointer;
+    }
+
+    .entry-content:empty {
+        display: none;
+    }
+
+    .posts .entry-content {
+        margin-top: 40px;
+        white-space: normal;
+
+        @include tablet {
+            display: none !important;
+        }
+    }
+
+    .main-entry-content {
+        display: none !important;
+
+        @include tablet {
+            display: block !important;
+
+            .entry-content {
+                margin-top: 40px;
+            }
+        }
+
+        .close-article {
+            display: none;
+        }
+    }
+}

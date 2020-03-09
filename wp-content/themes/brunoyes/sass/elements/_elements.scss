@@ -49,7 +49,7 @@ body.mce-content-body {
     }
 }
 
-p + .row {
+p + .row, .flexslider + .row {
     margin-top: 20px;
 }
 

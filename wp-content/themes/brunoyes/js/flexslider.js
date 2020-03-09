@@ -7,6 +7,9 @@
 ( function($) {
     $(window).load(function () {
         $('.flexslider').each( function () {
+            $(this).find('.image_preload:not(.loaded)').each(function () {
+                window.showImage($(this));
+            });
             $(this).flexslider({animation: 'slide', start: window.handleImagesVisibility});
             $(this).flexslider("pause");
         });

@@ -365,7 +365,7 @@ function brunoyes_lazyload_modify_img_tags( $content ) {
 
   $document = new DOMDocument();
   libxml_use_internal_errors(true);
-  $document->loadHTML(utf8_decode($content));
+  $document->loadHTML(utf8_decode($content), LIBXML_HTML_NODEFDTD);
 
   // Grab all image tags
   $imgs = $document->getElementsByTagName('img');
@@ -400,6 +400,9 @@ function brunoyes_lazyload_modify_img_tags( $content ) {
   }
 
   $html = $document->saveHTML();
+
+  $html = str_replace('<html><body>', '', $html);
+  $html = str_replace('</body></html>', '', $html);
 
   return $html;
 }

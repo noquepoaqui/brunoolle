@@ -20,47 +20,47 @@ textarea {
     font-family: $font__main;
     font-weight: 300;
     font-size: 14px;
-    letter-spacing: 0.04em;
-    line-height: 19.5px;
+    letter-spacing: $font__walsh-letter-spacing;
+    line-height: $font__line-height-body;
 }
 
 .gt-walsheim-14-regular {
     font-family: $font__main;
     font-weight: 400;
     font-size: 14px;
-    letter-spacing: 0.04em;
-    line-height: 19.5px;
+    letter-spacing: $font__walsh-letter-spacing;
+    line-height: $font__line-height-body;
 }
 
 .gt-walsheim-14-bold {
     font-family: $font__main;
     font-weight: 500;
     font-size: 14px;
-    letter-spacing: 0.04em;
-    line-height: 19.5px;
+    letter-spacing: $font__walsh-letter-spacing;
+    line-height: $font__line-height-body;
 }
 
 .gt-walsheim-24-light {
     font-family: $font__main;
     font-size: 24px;
-    letter-spacing: 0.04em;
-    line-height: 29px;
+    letter-spacing: $font__walsh-letter-spacing;
+    line-height: 31px;
     font-weight: 300;
 }
 
 .gt-walsheim-24-regular {
     font-family: $font__main;
     font-size: 24px;
-    letter-spacing: 0.04em;
-    line-height: 29px;
+    letter-spacing: $font__walsh-letter-spacing;
+    line-height: 31px;
     font-weight: 400;
 }
 
 .gt-walsheim-24-bold {
     font-family: $font__main;
     font-size: 24px;
-    letter-spacing: 0.04em;
-    line-height: 29px;
+    letter-spacing: $font__walsh-letter-spacing;
+    line-height: 31px;
     font-weight: 500;
 }
 

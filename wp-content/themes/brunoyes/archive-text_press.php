@@ -79,7 +79,7 @@ get_header();
 
                         entryContent.append(closeButton).show();
 
-                        mainEntryContent.html($this.parents('article').html()).show();
+                        mainEntryContent.data('id', id_post).html($this.parents('article').html()).show();
 
                         scrollToElementHeader($this);
                     },

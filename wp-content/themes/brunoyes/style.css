@@ -44,17 +44,17 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 @font-face {
   font-family: "Walsheim";
   font-weight: 400;
-  src: url("fonts/GT-Walsheim.otf"); }
+  src: url("fonts/AvenirLTStd-Roman.otf"); }
 
 @font-face {
   font-family: "Walsheim";
   font-weight: 300;
-  src: url("fonts/GT-Walsheim-Light.otf"); }
+  src: url("fonts/AvenirLTStd-Book.otf"); }
 
 @font-face {
   font-family: "Walsheim";
   font-weight: 500;
-  src: url("fonts/GT-Walsheim-Medium.otf"); }
+  src: url("fonts/AvenirLTStd-Medium.otf"); }
 
 @font-face {
   font-family: "Minion";
@@ -383,8 +383,8 @@ textarea {
   font-family: Walsheim;
   font-size: 16px;
   font-size: 1rem;
-  line-height: 19.5px;
-  letter-spacing: 0.04em;
+  line-height: 20px;
+  letter-spacing: 0.01em;
   font-size: 14px; }
 
 h1, h2, h3, h4, h5, h6 {
@@ -439,42 +439,42 @@ big {
   font-family: Walsheim;
   font-weight: 300;
   font-size: 14px;
-  letter-spacing: 0.04em;
-  line-height: 19.5px; }
+  letter-spacing: 0.01em;
+  line-height: 20px; }
 
 .gt-walsheim-14-regular {
   font-family: Walsheim;
   font-weight: 400;
   font-size: 14px;
-  letter-spacing: 0.04em;
-  line-height: 19.5px; }
+  letter-spacing: 0.01em;
+  line-height: 20px; }
 
 .gt-walsheim-14-bold {
   font-family: Walsheim;
   font-weight: 500;
   font-size: 14px;
-  letter-spacing: 0.04em;
-  line-height: 19.5px; }
+  letter-spacing: 0.01em;
+  line-height: 20px; }
 
 .gt-walsheim-24-light {
   font-family: Walsheim;
   font-size: 24px;
-  letter-spacing: 0.04em;
-  line-height: 29px;
+  letter-spacing: 0.01em;
+  line-height: 31px;
   font-weight: 300; }
 
 .gt-walsheim-24-regular {
   font-family: Walsheim;
   font-size: 24px;
-  letter-spacing: 0.04em;
-  line-height: 29px;
+  letter-spacing: 0.01em;
+  line-height: 31px;
   font-weight: 400; }
 
 .gt-walsheim-24-bold {
   font-family: Walsheim;
   font-size: 24px;
-  letter-spacing: 0.04em;
-  line-height: 29px;
+  letter-spacing: 0.01em;
+  line-height: 31px;
   font-weight: 500; }
 
 .minion-pro-16-regular {
@@ -575,7 +575,7 @@ body.mce-content-body .two-columns {
   border: 1px dotted gray;
   min-height: 20px; }
 
-p + .row {
+p + .row, .flexslider + .row {
   margin-top: 20px; }
 
 .row {
@@ -1160,8 +1160,9 @@ a {
   display: none; }
 
 .post-type-archive-text_press .posts .entry-content {
-  margin-top: 40px;
-  white-space: normal; }
+  margin-top: 40px; }
+  .post-type-archive-text_press .posts .entry-content[data-id="625"] {
+    white-space: normal; }
   @media (min-width: 768px) {
     .post-type-archive-text_press .posts .entry-content {
       display: none !important; } }
@@ -1172,7 +1173,8 @@ a {
     .post-type-archive-text_press .main-entry-content {
       display: block !important; }
       .post-type-archive-text_press .main-entry-content .entry-content {
-        margin-top: 40px; } }
+        margin-top: 40px;
+        white-space: normal; } }
   .post-type-archive-text_press .main-entry-content .close-article {
     display: none; }
 
@@ -1310,7 +1312,8 @@ a {
   bottom: 0;
   height: 100%;
   width: 100%;
-  background-size: cover; }
+  background-size: cover;
+  background-position: center center; }
 
 svg .global-stroke {
   stroke: black;

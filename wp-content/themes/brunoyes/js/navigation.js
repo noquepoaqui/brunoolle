@@ -137,25 +137,29 @@
         var elemTop = $elem.offset().top;
         var elemBottom = elemTop + $elem.height();
 
-        if (elemBottom > docViewTop && elemTop < docViewBottom) {
-            var image = $(atob($elem.data('image')));
-            image.addClass('loading');
-
-            if ($elem.find('.back').length !== 0) {
-                image.width($elem.width());
-                image.height($elem.height());
-            }
-
-            image.load(function () { image.removeClass('loading'); });
-            $elem.replaceWith(image);
+        if (elemBottom > (docViewTop - 200) && elemTop < (docViewBottom + 200)) {
+            window.showImage($elem);
         }
     }
     function handleImagesVisibility() {
-        $('.image_preload').each(handleImageVisibility);
+        $('.image_preload:not(.loaded)').each(handleImageVisibility);
     }
     window.addEventListener('scroll', handleImagesVisibility);
     setTimeout(handleImagesVisibility, 150);
     window.handleImagesVisibility = handleImagesVisibility;
+
+    window.showImage = function ($elem) {
+        var image = $(atob($elem.data('image')));
+        image.addClass('loading');
+        $elem.addClass('loaded');
+
+        image.load(function () {
+            $elem.hide().after(image);
+            setTimeout(function () {
+                image.removeClass('loading');
+            }, 10);
+        });
+    };
 
     //////////////////////////
     // Archive fake hovering:

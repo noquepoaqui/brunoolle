@@ -1,28 +1,28 @@
 @font-face {
     font-family: "Walsheim";
     font-weight: 400;
-    src: url("fonts/GT-Walsheim.otf");
+    src: url("fonts/AvenirLTStd-Roman.otf");
 }
 @font-face {
     font-family: "Walsheim";
     font-weight: 300;
-    src: url("fonts/GT-Walsheim-Light.otf");
+    src: url("fonts/AvenirLTStd-Book.otf");
 }
 @font-face {
     font-family: "Walsheim";
     font-weight: 500;
-    src: url("fonts/GT-Walsheim-Medium.otf");
+    src: url("fonts/AvenirLTStd-Medium.otf");
 }
+
 @font-face {
     font-family: "Minion";
     src: url("fonts/MinionPro-Regular.otf");
 }
-
 $font__main: Walsheim;
 $font__secondary: Minion;
 $font__code: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 $font__pre: "Courier 10 Pitch", Courier, monospace;
-$font__line-height-body: 19.5px;
+$font__line-height-body: 20px;
 $font__line-height-pre: 1.6;
-$font__walsh-letter-spacing: 0.04em;
+$font__walsh-letter-spacing: 0.01em;
 $font__size: 14px;
